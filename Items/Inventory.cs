@@ -10,17 +10,17 @@ namespace RogueLike.Items
          * The inventory class is used in every situation where one or multiple items need to be stored for future use.
          */
 
+        private readonly List<Item> innerList; // Contains the base list methods
+
+        public int Cap { get; private set; } // Size of the Inventory
+        public int Count { get { return innerList.Count; } } // Returns the amount of items on the Inventory
+
         // Creates a list of Items with Cap size
         public Inventory(int cap)
         {
             Cap = cap;
             innerList = new List<Item>(cap);
         }
-
-        private List<Item> innerList { get; set; } // Contains the base list methods
-
-        public int Cap { get; private set; } // Size of the Inventory
-        public int Count { get { return innerList.Count; } } // Returns the amount of items on the Inventory
 
         // Indexer of the Inventory
         public Item this[int index]

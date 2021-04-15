@@ -8,7 +8,7 @@ namespace RogueLike.Map
 {
     class Map
     {
-        public MapNode[,] Matrix { get; set; }
+        public MapTile[,] Matrix { get; set; }
         public PlayerBody Player { get; set; }
 
         public int Size { get; set; }
@@ -21,7 +21,7 @@ namespace RogueLike.Map
 
         public void CreateNewMap()
         {
-            Matrix = new MapNode[Size, Size];
+            Matrix = new MapTile[Size, Size];
         }
     }
 }
